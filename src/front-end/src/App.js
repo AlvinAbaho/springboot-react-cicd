@@ -6,7 +6,7 @@ import {
     Breadcrumb,
     Table,
     Spin,
-    Empty, Button, Tag, Badge, Radio, Popconfirm
+    Empty, Button, Tag, Badge, Radio, Popconfirm, Image, Divider
 } from 'antd';
 
 import {
@@ -221,7 +221,20 @@ function App() {
                     {renderStudents()}
                 </div>
             </Content>
-            <Footer style={{textAlign: 'center'}}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footer style={{textAlign: 'center'}}>
+                <Image
+                    width={75}
+                    src="https://user-images.githubusercontent.com/32915648/131268805-2fb49a9b-8cca-4bc1-b8dd-e5d577cec25b.png"
+                />
+                <Divider>
+                    <a
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        href="https://github.com/AlvinAbaho/springboot-react-cicd">
+                        Link to Github Repository
+                    </a>
+                </Divider>
+            </Footer>
         </Layout>
     </Layout>
 }
