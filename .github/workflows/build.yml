@@ -2,13 +2,13 @@ name: CI
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
   workflow_dispatch:
 
 env:
   POSTGRESQL_VERSION: 13.1
-  POSTGRESQL_DB: amigoscode
+  POSTGRESQL_DB: student
   POSTGRESQL_USER: postgres
   POSTGRESQL_PASSWORD: password
   JAVA_VERSION: 1.15
