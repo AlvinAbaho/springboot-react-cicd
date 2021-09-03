@@ -3,6 +3,7 @@ spring:
     url: 'jdbc:postgresql://aa115dbty3e2iih.cbkn8fxkqqus.us-east-2.rds.amazonaws.com:5432/students'
     username: rdspostgres
     password: VwmbyYuAZWiC7HmQSz
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
