@@ -1,7 +1,6 @@
 package com.example.demo.student;
 
 import lombok.AllArgsConstructor;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +17,7 @@ public class StudentController {
     @GetMapping
     public ResponseEntity<?> getAllStudents() {
         return new ResponseEntity<>(
-                studentService.getAllStudents(PageRequest.of(0, 100)),
+                studentService.getAllStudents(),
                 HttpStatus.OK);
     }
 
@@ -27,6 +26,14 @@ public class StudentController {
         return new ResponseEntity<>(
                 studentService.addStudent(studentDTO),
                 HttpStatus.CREATED
+        );
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> findStudentById(@PathVariable Long id){
+        return new ResponseEntity<>(
+                studentService.findById(id),
+                HttpStatus.OK
         );
     }
 
