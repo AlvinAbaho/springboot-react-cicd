@@ -40,7 +40,7 @@ const TheAvatar = ({name}) => {
 }
 
 const removeStudent = (id, callback) => {
-    deleteStudent(1231231231).then(() => {
+    deleteStudent(id).then(() => {
         successNotification(`Student with id: ${id} successfully deleted`);
         callback();
     }).catch(err => {
